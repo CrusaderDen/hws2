@@ -13,16 +13,9 @@ export const PATH = {
     PRE_JUNIOR: '/pre-junior',
     JUNIOR: '/junior',
     JUNIOR_PLUS: '/junior-plus',
-    ERROR: 'Error404'
+    ERROR: '/Error404'
 }
 
-const emptyPageInlineStyles = {
-    minHeight: '100dvh',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontSize: '100px'
-}
 
 function Pages() {
     return (
@@ -34,9 +27,9 @@ function Pages() {
                 <Route path={'/'} element={<Navigate to={PATH.PRE_JUNIOR}/>}/>
 
                 {/*роуты для /pre-junior, /junior, /junior-plus*/}
-                <Route path={PATH.PRE_JUNIOR} element={<div><HW1/><HW2/><HW3/><HW4/></div>}/>
-                <Route path={PATH.JUNIOR} element={<div style={emptyPageInlineStyles}>На этой странице пока ничего нет</div>}/>
-                <Route path={PATH.JUNIOR_PLUS} element={<div style={emptyPageInlineStyles}>И на этой тоже, не так быстро дружок)</div>}/>
+                <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
+                <Route path={PATH.JUNIOR} element={<Junior/>}/>
+                <Route path={PATH.JUNIOR_PLUS} element={<JuniorPlus/>}/>
 
                 {/*роут для несуществующей страницы должен отрисовать <Error404 />*/}
                 <Route path={PATH.ERROR} element={<Error404/>}/>

@@ -7,8 +7,16 @@ import React from 'react'
 // import HW15 from '../../hw15/HW15'
 
 function JuniorPlus() {
+    const emptyPageInlineStyles = {
+        minHeight: '100dvh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: '100px'
+    }
     return (
         <div id={'hw5-page-junior-plus'}>
+            <div style={emptyPageInlineStyles}>И на этой тоже, не так быстро дружок)</div>
             {/*<HW10 />*/}
             {/*<HW11 />*/}
             {/*<HW12 />*/}
